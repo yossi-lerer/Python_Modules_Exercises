@@ -17,6 +17,11 @@ def run_grade_helper(students):
                 passed_students += 1
                 
         else:
-            print_skipped_student((validate_student(i) ,validate_grade(i[1])))
+            try:
+                print_skipped_student((validate_student(i) ,validate_grade(i[1])), i)
+            except TypeError:
+                print("TypeError")
+            except IndexError:
+                print("\nError: Attempted access outside of index")
     average_calc = calculate_average(average, count_students)
     print_summary(average_calc, passed_students)
