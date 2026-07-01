@@ -6,7 +6,7 @@ def get_students():
     ("Maya", 91),
     ("Ron", 60),
     ("Noa", "88"),
-    ("Ben", 120),
+    ["Ben", 120],
     ("Lior", -5),
     (55, 70)
     ]

@@ -5,7 +5,7 @@ def validate_student(student):
             validate = True
         else:
             validate = False
-            return validate
+            return "Data must be a tuple"
     except:
         validate = False
         return validate
@@ -24,7 +24,7 @@ def validate_student(student):
             validate = True
         else:
             validate = False
-            return validate
+            return "Name must be a string"
     except TypeError:
             validate = False
             return validate
@@ -37,10 +37,10 @@ def validate_grade(grade):
         validate = True
     else:
         validate = False
-        return validate
+        return "Grade must be an integer"
     if 0 < grade <= 100:
         validate = True
     else:
         validate = False
-        return validate
+        return "Grade must be between 0 and 100"
     return validate
